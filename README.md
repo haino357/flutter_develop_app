@@ -3,14 +3,23 @@
 下記に使用した技術を記載する。
 
 ## デザイン
+### マテリアルデザイン
 マテリアルデザインのアプリを作成するために、MaterialAppを使用する。そのためには下記をimportする。
 Android風のデザインを作成するために、MaterialAppを使用する。
 ```dart
 import 'package:flutter/material.dart';
 ```
+MaterialBottomNavigationのように、タブを切り替えるたびにページがビルドされるとなると、APIで情報を取得して表示しているページの場合、切り替えるたびにAPIリクエストを行い、ページを生成することになる。
+情報の鮮度が高く保てますがその分APIの待ちなどで画面が生成できるまでユーザーに待ちの時間を作る可能性も発生
+
+### カッパチーノデザイン
 クパチーノデザインのアプリを作成するために、CupertinoAppを使用する。そのためには下記をimportする。
 iOS風のデザインを作成するために、CupertinoAppを使用する。
 ```dart
 import 'package:flutter/cupertino.dart';
 ```
+CupertinoBottomNavigationの場合だと、他に画面更新のトリガーを入れない限り、最初に取得した情報のままになっている。
+その場合には、pull_to_refresh などで行えるように画面を構築するのも良い。
+
+### 今回の使用技術
 今回は、マテリアルデザインのアプリをメインにするために、MaterialAppを使用する。
