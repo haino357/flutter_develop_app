@@ -1,8 +1,22 @@
-# flutter_develop_app
+# flutter検証アプリ
 技術検証のために作成したFlutterアプリ
 下記に使用した技術を記載する。
 
 ## デザイン
+### アプリ表示名の変更
+アプリの表示名を変更するためには下記を変更する。
+ios/Runner/Info.plist
+```xml
+<key>CFBundleName</key>
+<string>アプリ名</string>
+```
+android/app/src/main/AndroidManifest.xml
+```xml
+<application
+    android:label="アプリ名"
+    android:icon="@mipmap/ic_launcher">
+```
+
 ### マテリアルデザイン
 マテリアルデザインのアプリを作成するために、MaterialAppを使用する。そのためには下記をimportする。
 Android風のデザインを作成するために、MaterialAppを使用する。
