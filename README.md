@@ -2,6 +2,20 @@
 技術検証のために作成したFlutterアプリ
 下記に使用した技術を記載する。
 
+## 現在の環境(2024/02/05時点)
+- Flutter 3.16.9-stable
+- Dart  3.2.6 (stable)
+- Android Studio Electric Eel | 2022.1.1 Patch 2
+- Xcode 12.5.1
+- Android
+  - targetSdkVersion 
+  - compileSdkVersion
+  - minSdkVersion
+- iOS
+  - 
+- macOS Ventura 13.0.1
+
+
 ## デザイン
 ### アプリ表示名の変更
 アプリの表示名を変更するためには下記を変更する。
