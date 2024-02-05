@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_develop_app/page/sample_page.dart';
+import 'package:flutter_develop_app/page/webview_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -27,7 +28,12 @@ class HomePage extends StatelessWidget {
             child: const Text('プロジェクト作成時サンプル画面'),
           ),
           ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const WebviewPage()),
+              );
+            },
             child: const Text('webviewPage'),
           ),
           ElevatedButton(

@@ -15,6 +15,8 @@
   - 
 - macOS Ventura 13.0.1
 
+## 使用パッケージ
+- [webview_flutter 4.5.0](https://pub.dev/packages/webview_flutter)
 
 ## デザイン
 ### アプリ表示名の変更
