@@ -54,6 +54,21 @@ CupertinoBottomNavigationの場合だと、他に画面更新のトリガーを�
 ### 今回の使用技術
 今回は、マテリアルデザインのアプリをメインにするために、MaterialAppを使用する。
 
+## Webview
+- Webviewを使用するためには、webview_flutterを使用する。
+- Androidでは、WebViewを使用するために、AndroidManifest.xmlに下記を追加する。
+```xml
+<uses-permission android:name="android.permission.INTERNET"/>
+```
+- iOSでは、Info.plistに下記を追加する。
+```xml
+<key>NSAppTransportSecurity</key>
+<dict>
+    <key>NSAllowsArbitraryLoads</key>
+    <true/>
+</dict>
+```
+
 ## リリース
 ### Android
 #### エラー対応
