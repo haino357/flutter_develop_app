@@ -53,3 +53,28 @@ CupertinoBottomNavigationの場合だと、他に画面更新のトリガーを�
 
 ### 今回の使用技術
 今回は、マテリアルデザインのアプリをメインにするために、MaterialAppを使用する。
+
+## リリース
+### Android
+#### エラー対応
+##### バージョン コード 1 はすでに使用されています。別のバージョン コードをお試しください。
+バージョンコードを変更するためには、android/app/build.gradleのversionCodeを変更する。
+```gradle
+def flutterVersionCode = localProperties.getProperty('flutter.versionCode')
+// Androidのバージョンコードを設定
+flutterVersionCode = '1'
+
+// 中略
+
+android {
+    defaultConfig {
+        // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
+        applicationId "com.flutter_develop_app.flutter_develop_app"
+        minSdkVersion flutter.minSdkVersion
+        targetSdkVersion flutter.targetSdkVersion
+        versionCode flutterVersionCode.toInteger()
+        versionName flutterVersionName
+    }
+}
+```
+### iOS
