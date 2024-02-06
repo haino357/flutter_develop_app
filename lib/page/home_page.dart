@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_develop_app/page/login_page.dart';
 import 'package:flutter_develop_app/page/sample_page.dart';
 import 'package:flutter_develop_app/page/webview_page.dart';
 
@@ -41,7 +42,12 @@ class HomePage extends StatelessWidget {
             child: const Text('無限スクロールPage'),
           ),
           ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const LoginPage()),
+              );
+            },
             child: const Text('ログインPage'),
           ),
         ],
