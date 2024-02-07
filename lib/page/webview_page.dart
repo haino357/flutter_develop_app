@@ -6,6 +6,9 @@ class WebviewPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // 表示するURL
+    String url = 'https://flutter.dev';
+
     WebViewController controller = WebViewController()
       ..setJavaScriptMode(JavaScriptMode.unrestricted) // JavaScriptを有効化
       ..setBackgroundColor(const Color(0x00000000)) // 背景色を透明にする
@@ -25,7 +28,7 @@ class WebviewPage extends StatelessWidget {
           },
         ),
       )
-      ..loadRequest(Uri.parse('https://flutter.dev')); // URLを指定
+      ..loadRequest(Uri.parse(url)); // URLを指定して読み込む
 
     return Scaffold(
         appBar: AppBar(
