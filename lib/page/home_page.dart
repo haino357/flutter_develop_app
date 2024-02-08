@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -39,13 +40,22 @@ class HomePage extends StatelessWidget {
               ),
               ElevatedButton(
                 onPressed: () {
-                  // Navigator.push(
-                  //   context,
-                  //   MaterialPageRoute(builder: (context) => const LoginPage()),
-                  // );
                   Navigator.pushNamed(context, '/login');
                 },
                 child: const Text('ログインPage'),
+              ),
+              ElevatedButton(
+                onPressed: () async {
+                  const url =
+                      'twitter://user?screen_name=hai_haino'; // <-Twitterアプリのユーザープロフ画面を開くURLScheme
+                  launchUrl(
+                    Uri.parse(url),
+                    // mode: LaunchMode.externalNonBrowserApplication,  // Twitterアプリが開く
+                    // mode: LaunchMode.platformDefault, // アプリに応じてデフォルトのアプリが開く
+                    mode: LaunchMode.externalApplication, //
+                  );
+                },
+                child: const Text('外部アプリを開く：Twitter'),
               ),
               // アコーディオンView
               ListView.builder(

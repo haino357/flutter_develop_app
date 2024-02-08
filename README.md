@@ -17,6 +17,9 @@
 
 ## 使用パッケージ
 - [webview_flutter 4.5.0](https://pub.dev/packages/webview_flutter)
+  - Webviewを使用するためのパッケージ
+- [url_launcher 6.2.4](https://pub.dev/packages/url_launcher)
+  - URLを開くためのパッケージ
 
 ## デザイン
 ### アプリ表示名の変更
