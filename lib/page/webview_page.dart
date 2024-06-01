@@ -45,6 +45,7 @@ class WebviewPage extends StatelessWidget {
       ..loadRequest(Uri.parse(url)); // URLを指定して読み込む
     return Scaffold(
         appBar: AppBar(
+          centerTitle: true,
           title: const Text('WebviewPage'),
         ),
         body: WebViewWidget(controller: controller));
