@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_develop_app/page/home_page.dart';
-import 'package:flutter_develop_app/page/login_page.dart';
-import 'package:flutter_develop_app/page/sample_page.dart';
-import 'package:flutter_develop_app/page/webview_page.dart';
+
+import 'package:flutter_develop_app/view/page/home_page.dart';
+import 'package:flutter_develop_app/view/page/login_page.dart';
+import 'package:flutter_develop_app/view/page/sample_page.dart';
+import 'package:flutter_develop_app/view/page/webview_page.dart';
 
 void main() {
   runApp(const MyApp());
